@@ -1,0 +1,69 @@
+name: Customer Record
+description: Create or update a CRM customer record
+title: "[ACCOUNT] Account Nick - Account Name"
+labels: ["customer"]
+body:
+  - type: input
+    id: account_nick
+    attributes:
+      label: Account Nick
+      placeholder: Short internal account code
+    validations:
+      required: true
+
+  - type: input
+    id: account_name
+    attributes:
+      label: Account Name
+      placeholder: Legal company name
+    validations:
+      required: true
+
+  - type: dropdown
+    id: account_type
+    attributes:
+      label: Account Type
+      options:
+        - Prospect
+        - Active Customer
+        - Partner
+        - Former Customer
+    validations:
+      required: true
+
+  - type: input
+    id: ecc
+    attributes:
+      label: ECC
+      placeholder: Customer code / reference
+
+  - type: input
+    id: reg_country
+    attributes:
+      label: Registration Country
+    validations:
+      required: true
+
+  - type: textarea
+    id: reg_address
+    attributes:
+      label: Registration Address
+
+  - type: input
+    id: account_country
+    attributes:
+      label: Account Country
+
+  - type: textarea
+    id: inv_address
+    attributes:
+      label: Invoice Address
+
+  - type: dropdown
+    id: account_manager
+    attributes:
+      label: Account Manager
+      options:
+        - Manager A
+        - Manager B
+        - Manager C
